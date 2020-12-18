@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  </style>
+</head>
+<body>
+    
+    <main>
+        <div class="main-container">
+            <div class="left-container container">
+                <h1 class="header">Learn to code by watching others</h1>
+                <p class="text">
+                    See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+                    but understanding how developers think is invaluable. 
+                </p>
+            </div>
+            <div class="signup">
+                <div class="signup-header">
+                    <p class="header-message-text"><span class="ad">  Try it free 7 days then $20/mo. thereafter</span></p>
+                </div>
+                <form action="#" class="signup-form" data-form>
+                    <div class="input-wrapper">
+                        <input type="text" class="form-input" name="fname" id="fname" placeholder="First Name" data-input="fname">
+                        <p class="form-invalid-message" data-error-msg="fname">First name cannot be empty</p>
+                        <p class="form-invalid-input" data-error-msg="fname">Error: First name cannot contain number or one letter!</p>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input type="text"  class="form-input" name="lname" id="lname" placeholder="Last Name" data-input="lname">
+                        <p class="form-invalid-message" data-error-msg="lname">Last name cannot be empty</p>
+                        <p class="form-invalid-input" data-error-msg="lname">Error: Last name cannot contain number or one letter!</p>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input type="email"  class="form-input" name="email" id="email" placeholder="Email Address" data-input="email">
+                        <p class="form-invalid-message" data-error-msg="email">Email Address cannot be empty</p>
+                        <p class="form-invalid-input" data-error-msg="email">Looks like this is not a valid email</p>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input type="text" class="form-input" name="password" id="password" placeholder="Password" data-input="password">
+                        <p class="form-invalid-message" data-error-msg="password">Password cannot be empty</p>
+                        <p class="form-invalid-input" data-error-msg="password">At least 6 characters, including uppercase, lowercase letters and numbers</p>
+                    </div>
+
+                    <button type="submit" class="submit-button" id="btn">Claim your free trial</button>
+                    <p class="terms">By clicking the button, you are agreeing to our <a href="#" class="terms-link">Terms and Services</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Diogo Lopes</a>.
+    </p>
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>

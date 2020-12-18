@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Primary */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --Blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --DarkBlue: hsl(249, 10%, 26%);
+    --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/bg-intro-desktop.png), var(--Red);
+    background-position: top;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    margin: 120px 30px;
+}
+
+.left-container {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.header {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-shadow: 0 0 2px rgb(168, 166, 166);
+    margin-bottom: 30px;
+}
+
+.text {
+    width: 500px;
+    font-weight: 500;
+    text-shadow: 0 0 2px rgb(168, 166, 166);
+}
+
+.ad {
+    font-weight: 600;
+}
+
+.signup {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    max-width: 570px;
+    margin-left: 20px;
+}
+
+.signup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--Blue);
+    border-radius: 10px;
+    height: 58px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header-message-text {
+    font-weight: 300;
+}
+
+.signup-form {
+    display: flex;
+    flex-flow: column;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper::before {
+    visibility: hidden;
+    position: absolute;
+    content: url(/images/icon-error.svg);
+    top: 20%;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.input-wrapper.active::before {
+    visibility: visible;
+}
+
+.input-wrapper.active .form-input{
+    color: var(--Red);
+    border: 2px solid var(--Red);
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid var(--GrayishBlue);
+    border-radius: 4px;
+    height: 50px;
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.form-input, .form-input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-input:focus.form-input {
+    border: 1px solid var(--DarkBlue);
+}
+
+.form-input:invalid {
+    box-shadow: none;
+}
+
+.form-invalid-message {
+    visibility: hidden;
+    height: 0px;
+    color: var(--Red);
+    margin-top: 3px;
+    align-self: flex-end;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.form-invalid-input {
+    visibility: hidden;
+    height: 0px;
+    color: var(--Red);
+    margin-top: 3px;
+    align-self: flex-end;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.form-invalid-message.active {
+    visibility: visible;
+    height: 15px;
+    margin: 15px 0 15px 0;
+}
+
+.form-invalid-input.active {
+    visibility: visible;
+    height: 15px;
+    margin: 5px 0 15px 0;
+}
+
+.submit-button {
+    position: relative;
+    background: var(--Green);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom-width: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-button:hover {
+    opacity: 0.8;
+}
+
+.terms {
+    color: var(--GrayishBlue);
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.terms-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--Red);
+    font-weight: 700;
+}
+
+.terms-link::before {
+    position: absolute;
+    content: '';
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--Red);
+}
+
+.terms-link:hover::before {
+    width: 100%;
+    left: 0%;
+    transition: .7s ease-in-out;
+}
+
+.attribution { 
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-size: 11px; 
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 812px) {
+
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+    .main-container {
+        display: block;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .left_container {
+        width: 300px;
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    .header {
+        font-size: 30px;
+        width: 300px;
+        margin-top: -15%;
+    }
+
+    .text {
+        font-size: 16px;
+        width: 300px;
+        text-align: center;
+        margin-left: -10%;
+    }
+    
+    .signup {
+        margin-left: -10%;
+        width: 300px;
+    }
+
+    .signup-header {
+        height: 60px;
+        text-align: center;
+        padding: 40px;
+        margin-top: 20%;
+    }
+
+    .form {
+        padding: 20px;
+        left: -50%;
+        top: 10%;
+    }
+
+    .attribution { 
+        position: absolute;
+        width: 100%;
+        left: -7%;
+        bottom: -32%;
+        font-size: 11px; 
+        text-align: center;
+        font-weight: 700;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .header {
+        font-size: 60px;
+        margin-left: -20%;
+        margin-top: -10%;
+    }
+
+    .text {
+        font-size: 18px;
+        margin-left: -20%;
+    }
+
+    .signup-header {
+        height: 60px;
+        text-align: center;
+        padding: 40px;
+        margin-top: -15%;
+    }
+
+    .form {
+        margin-left: -10%;
+    }
+
+    .attribution { 
+        position: absolute;
+        width: 100%;
+        left: -7%;
+        bottom: 17%;
+        font-size: 11px; 
+        text-align: center;
+        font-weight: 700;
+        color: black;
+    }
+}
+
